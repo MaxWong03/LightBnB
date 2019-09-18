@@ -33,8 +33,8 @@ CREATE TABLE properties (
 
 CREATE TABLE rates (
   id SERIAL PRIMARY KEY NOT NULL,
-  start_date TIMESTAMP,
-  end_date TIMESTAMP,
+  start_date DATE,
+  end_date DATE,
   cost_per_night INTEGER,
   property_id INTEGER NOT NULL REFERENCES properties(id) ON DELETE CASCADE
 );
